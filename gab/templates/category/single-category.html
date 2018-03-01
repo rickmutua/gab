@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% block content %}
+
+        {{ block.super }}
+
+
+            <div class="container">
+
+                {% for box in boxes %}
+
+                    <div class="col-sm-6 col-md-3" style="text-align: center;">
+
+                        <a href="{% url 'box' box.id box.slug %}">
+
+                            <img id="boxIcon" src="{{ box.image.url }}" alt="Image" class="img-responsive">
+
+                        </a>
+
+                        <h2> {{ box.name }} </h2>
+
+                            <p> {{ box.quantity }} </p>
+
+                            <p> {{ box.quality }} </p>
+
+                            <p> {{ box.feeds }} </p>
+
+                            <p> {{ box.price }} </p>
+
+                            <p> {{ box.shipping }} </p>
+
+                    </div>
+
+
+
+
+                {% endfor %}
+
+            </div>
+
+
+    {% endblock %}
+
+</body>
+</html>

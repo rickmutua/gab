@@ -1,0 +1,158 @@
+.help-block {
+  display: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+
+#img {
+
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#top {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btnlinks {
+    float: right;
+    margin: 10%;
+    color: white;
+
+}
+
+#giftbox {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+#getbox {
+    background-color: orange;
+    border-color: orange;
+    color: white;
+    padding-right: 20px;
+}
+
+#giftpage {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#bold:hover {
+    color: black;
+    font-weight: bold;
+}
+
+#footer {
+    color: #737373;
+    list-style-type: none;
+}
+
+a {
+    color: black;
+}
+
+#foo {
+    color: #777777;
+}
+
+#foo:hover {
+    color: white;
+}
+
+#email {
+    color: white;
+}
+
+#happiness {
+    color: deeppink;
+    border-color: deeppink;
+}
+
+h2 {
+    font-family: "Noto Sans Mono CJK SC Regular";
+}
+
+h3 {
+    font-family: NanumBarunGothic;
+}
+
+#gourmet {
+    font-size: 50px;
+}
+
+.side {
+    margin: 2%;
+    font-size: 18px;
+    font-family: fantasys;
+}
+
+#header {
+    font-size: 18px;
+    font-family: fantasys;
+    color: black;
+}
+
+#nav {
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    font-family: fantasys;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    height: 50px;
+    vertical-align: center;
+    padding: 15px;
+}
+
+th {
+    border: none;
+    border-top: 1px solid black;
+}
+
+#cart-image {
+    height: 50px;
+    width: 25ox;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
+#boxIcon {
+    width: 600px;
+    height: 430px;
+}
+
+#descImage {
+    width: 350px;
+    height: 350px;
+}

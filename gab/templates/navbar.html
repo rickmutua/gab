@@ -1,0 +1,113 @@
+{% load bootstrap3 %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% block styles %}
+
+        {% bootstrap_css %}
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    {% endblock %}
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse" role="navigation"  id="nav">
+
+    <div class="navbar-inner">
+
+        <div class="container">
+
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+            <div class="col-sm-10 col-md-10 col-lg-10">
+
+                <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a id="brand" class="navbar-brand" href="{% url 'index' %}">
+                    GAB
+                </a>
+
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right" id="bold" style="font-weight: bold;">
+
+                    <li>
+                        <a href=""> GIFT A BOX </a>
+                    </li>
+
+                    <li>
+                        <a href=""> GET THE BOX </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'cart' %}"> CART </a>
+                    </li>
+
+                    <li>
+
+                        {% if user.is_authenticated %}
+
+                                <li>
+                                    <a href="#" data-placement="bottom" data-toggle="tooltip" href="#"></i></a>
+                                </li>
+
+                                <li class="dropdown">
+
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user.username}} <b class="fa fa-angle-down"></b></a>
+
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+
+                                        <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+
+                                        <li><a href="/accounts/logout"> Logout </a> </li>
+
+                                        <li class="divider"></li>
+
+                                    </ul>
+
+                                </li>
+
+                        {%else%}
+
+                            <a href="/accounts/login" class="btn btn-default"> LOGIN </a>
+
+                        {% endif %}
+                    </li>
+
+                </ul>
+
+            </div>
+
+            </div>
+
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% block styles %}
+
+        {% bootstrap_css %}
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    {% endblock %}
+
+</head>
+<body>
+
+
+    <footer>
+
+        <div class="container-fluid" style="" id="footer">
+
+
+            <div class="row" style="background-color: #333333; padding-top: 50px; padding-bottom: 50px;">
+
+                <div class="col-sm-6 col-md-3">
+
+                    <li> <a href="" id="foo"> SEND A GIFT </a> </li>
+
+                    <li> <a href="" id="foo"> GET A BOX </a> </li>
+
+                    <li> <a href="" id="foo"> OUR MISSION </a> </li>
+
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+
+                    <li> <a href="" id="foo"> CORPORATE GIFTS </a> </li>
+
+                    <li> <a href="" id="foo"> BIRTHDAY GIFTS </a> </li>
+
+                    <li> <a href="" id="foo"> CONTACT US </a> </li>
+
+                </div>
+
+                <div class="col-sm-12 col-md-3" style="text-align: center;">
+
+                    <h4> THE GAB GUARANTEE </h4>
+
+                    <p> At Gift A Box we work hard to make you hapy. If for some reason you are unsertisfied, email us at <a href="" id="email"> wecare@giftabox.com</a> and we will get it right. </p>
+
+                </div>
+
+                <div class="col-sm-12 col-md-3" style="text-align: center;">
+
+                    <h4> GIFT A BOX </h4>
+
+                    <a href="#" <i class="fa fa-facebook" style="font-size: 36px; color: #777777; padding-right: 15px;"> </i> </a>
+                    <a href="#" <i class="fa fa-instagram" style="font-size:36px; color: #777777; padding-right: 15px;"></i> </a>
+                    <a href="#" <i class="fa fa-youtube" style="font-size:36px; color: #777777;  padding-right: 15px;"></i> </a>
+                    <a href="#" <i class="fa fa-twitter" style="font-size:36px; color: #777777; padding-right: 15px;"></i> </a>
+                    <a href="#" <i class="fa fa-pinterest" style="font-size:36px; color: #777777;"></i> </a>
+
+                </div>
+
+            </div>
+
+            <div class="row" style="text-align: center; background-color: #303030;">
+
+                <p> (c) 2018 Gift A Box - Terms & Conditions </p>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+</html>

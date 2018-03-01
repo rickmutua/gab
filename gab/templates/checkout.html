@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% block content %}
+
+        {{ block.super }}
+
+
+            <div class="container">
+
+                <table style="background-color: white;">
+
+                    <thead>
+
+                        <tr style="text-align: center">
+
+                            <th style="border-left: 1px solid black;"> ITEM </th>
+
+                            <th style="text-align: center"> QUANTITY </th>
+
+                            <th style="text-align: center"> UNIT PRICE </th>
+
+                            <th style="text-align: right; border-right: 1px solid black;"> SUB TOTAL </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+
+                    {% for item in cart %}
+
+                        <tr>
+
+                            <td> <img id="cart-image" src="{{ item.product.image.url }}" class="img-responsive" alt="Image"> {{ item.product.name }}</td>
+
+                            <td style="text-align: center">{{ item.quantity }}</td>
+
+                            <td style="text-align: center"> KSh {{ item.total_price }}</td>
+
+                            <td style="text-align: right"> KSh {{ item.total_price }}</td>
+
+                        </tr>
+
+                    {% endfor %}
+
+                </table>
+
+
+
+
+                <form action="{% url 'checkout' %}" method="post">
+
+                    {% csrf_token %}
+
+                    {% bootstrap_form form %}
+
+                        <input type="submit" class="btn btn-success btn-sm" value="Check Out">
+
+                </form>
+
+
+
+            </div>
+
+
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{ title }} </title>
+
+    {% block styles %}
+
+        {% bootstrap_css %}
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    {% endblock %}
+
+</head>
+<body>
+
+
+    {% block content %}
+
+        {{ block.super }}
+
+            <div class="container-fluid" id="top" style="background-image: url({% static 'images/back.jpg' %}); height: 600px; background-attachment: fixed">
+
+                <div class="row" style="text-align: center" id="btnlinks">
+
+                    <h2 id="gourmet"> Gourmet items delivered. </h2>
+
+                    <p> THE BEST SORTED ITEMS STRAIGHT TO YOUR DOOR. </p>
+
+                        <a href="{% url 'categories' %}" class="btn btn-default" id="getbox"> GET THE BOX </a>
+
+
+                        <a href="{% url 'categories' %}" class="btn btn-default" id="giftbox"> GIFT A BOX </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="container-fluid" style="text-align: center; margin-bottom: 30px; background-color: #E0E0E0;">
+
+                <br>
+
+                <h2 style="margin-top: 50px;"> HOW IT WORKS </h2>
+
+                <br>
+
+                <div class="row" style="margin-bottom: 50px; margin-top: 30px;">
+
+                    <div class="col-sm-12 col-md-4">
+
+                        <img src="{% static 'images/box.jpg' %}" alt=" Image" class="img-responsive" id="img" align="center">
+
+                        <br>
+
+                        <h4> 1. BROWSE </h4>
+
+                        <br>
+
+                        <p> Browse through the web app and checkout the different sorted boxes we have</p>
+
+                    </div>
+
+                    <div class="col-sm-12 col-md-4">
+
+                        <img src="{% static 'images/cart.png' %}" alt=" Image" class="img-responsive" id="img">
+
+                        <br>
+
+                        <h4> 2. ADD TO CART </h4>
+
+                        <br>
+
+                        <p> Add to your shopping cart whatever box suits your needs </p>
+
+                    </div>
+
+                    <div class="col-sm-12 col-md-4">
+
+                        <img src="{% static 'images/pay.jpg '%}" alt=" Image" class="img-responsive" id="img">
+
+                        <br>
+
+                        <h4> 3. CHECKOUT </h4>
+
+                        <br>
+
+                        <p> Pay for the box and leave an address where you want it delivered</p>
+
+                    </div>
+
+                </div>
+
+                <br>
+
+            </div>
+
+
+            <div class="container-fluid" style="text-align: center; margin-top: 30px;">
+
+                    <h2> ITEMS FEATURED IN PAST BOXES </h2>
+
+                    <h4> Take a look inside our curation process and get a better sense of what might be heading your way </h4>
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+
+                            <img src="{% static 'images/box.jpg' %}" alt=" Image" class="img-responsive" id="box">
+
+                        </div>
+
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+
+                            <img src="{% static 'images/marsh.jpg' %}" alt=" Image" class="img-responsive" id="box">
+
+                        </div>
+
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+
+                            <img src="{% static 'images/chocolate.jpg' %}" alt=" Image" class="img-responsive" id="box">
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+
+                            <img src="{% static 'images/cookies.jpg' %}" alt=" Image" class="img-responsive" id="box">
+
+                        </div>
+
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+
+                            <img src="{% static 'images/choc.jpeg' %}" alt=" Image" class="img-responsive" id="box">
+
+                        </div>
+
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+
+                            <img src="{% static 'images/bika.jpg' %}" alt=" Image" class="img-responsive" id="box">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+
+                            <h3> The Box </h3>
+
+                            <p> Inside the box you will find different sorted items and a gift from us. </p>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+
+                            <h3> Marshmallow </h3>
+
+                            <p> Salted caramel holds the marshmallow together with toasted petit beurre cookies for perfect ping pong flavor match between salty and sweet. </p>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+
+                            <h3> Biscotti </h3>
+
+                            <p> Simple but stellar, the vanilla biscotti is filled with white chocolate pieces and toasted hazelnuts. This is an update on a true classic, with a fresh and modern twist. </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+
+                            <h3> Ginger Cookie </h3>
+
+                            <p> You either love it or you hate it! If you’re looking for something that’s a little more stimulating than your standard chocolate chip cookie, this sweet creation might just be it! </p>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+
+                            <h3> Hot Chocolate on a Stick </h3>
+
+                            <p> The most talked about delicacy in the West Village, Nairobi is here! Simply stir the Hot Chocolate on Stick into a cup of steamed milk to enjoy this premium chocolate goodness! </p>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+
+                            <h3> Chocolate </h3>
+
+                            <p> Hand-harvested from the beautiful, tropical waters surrounding the island of Bali, Flower of Bali Sea Salt is comprised of delicate sea salt crystals that form on the surface of the salt beds. </p>
+
+                        </div>
+
+                    </div>
+
+            </div>
+
+    <div class="container-fluid" style="margin-top: 50px; background-image: url({% static 'images/footer.jpg' %}); height: 450px; background-attachment: fixed;">
+
+        <div class="row" style="padding-top: 60px; padding-bottom: 60px;">
+
+            <div class="col-xs-12 col-sm-6 col-md-6" style="color: white; margin: 5%; text-align: center">
+
+                <h2> GIFT HAPPINESS </h2>
+
+                <P> Happiness is best shared! Gift your friends a heartwarming box of sweetness or embark on an exciting foodie adventure. </P>
+
+                <br>
+
+                <a href="" class="btn btn-default" id="happiness"> GIFT THE BOX </a>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    {% endblock %}
+
+</body>
+</html>
